@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+  </style>
+  <title>Remote Jobs</title>
+  <!-- <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link> -->
+
+</head>
+<body style="font-family: 'Lobster', cursive; background-color: #f1f2f6">
+  <header style="margin: 40px; display:flex; flex-direction: column;">
+    <div style="text-align: right; margin-right: 50px;">
+      <h1 style="font-size: 35px">Remote Jobs</h1>
+      <h2 style="font-size: 28px">{{number}} {{term}} jobs found</h2>
+    <a style="font-size:25px" href="/export?term={{term}}">Export to CSV</a></br>
+    <a style="font-size: 23px" class="link" href="/"><i style="border:none; margin-right: 5px;" class="fas fa-arrow-left"></i>Go back</a>
+    </div>
+  </header>
+  <main style="display:flex; flex-direction: column; ">
+    {% for job in all_jobs %}
+    <div style="justify-content: center; display:flex;">
+      <div style="padding: 20px 0; background-color: #dfe4ea; justify-content: center; width: 50%; text-align: center; border-radius: 20px">
+      <h2 style="font-size: 28px">
+        {{job.title}}
+      </h2>
+      <h4 style="font-size: 25px">{{job.company}}</h4>
+      <a style="font-size: 24px" href={{job.URL}}{{job.link}}>Apply</a>
+      </div>
+    </div>
+    <hr style="align: center; border: solid 2px #a4b0be; width:30%">
+    {% endfor %}
+
+  </main>
+  
+  <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
