@@ -1,3 +1,2 @@
-# Scrapping-Jobs
+# 각종 구직 웹사이트를 크롤링하는 웹사이트 생성
 
-## https://repl.it/@DevelopSoo/Day-Thirteen-and-Fourteen#main.py
